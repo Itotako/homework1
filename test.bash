@@ -9,7 +9,7 @@ import sys
 import random
 import io
 
-from janken import main
+from janken_test import main
 
 class TestJanken(unittest.TestCase):
 
