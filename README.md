@@ -32,7 +32,7 @@ $ echo ピース | ./janken
 
 ## 必要なソフトウェア
 - Python
-  - テスト済みバージョン: 3.7 ~ 3.12(All checks have failed)実行日:2024/12/02
+  - テスト済みバージョン: 3.7 ~ 3.12
 
 ## テスト環境
 - Ubuntu 22.04.5 LTS on Windows
@@ -44,7 +44,7 @@ $ echo ピース | ./janken
 * [ロボットシステム学 第6回: ソフトウェアのテスト](https://ryuichiueda.github.io/slides_marp/robosys2024/lesson6.html)
 * [ロボットシステム学 第7回: GitHubでのテスト](https://ryuichiueda.github.io/slides_marp/robosys2024/lesson7.html)
 * [Pythonの基礎文法だけでじゃんけんプログラムを開発する5つの方法](https://jp-seemore.com/iot/python/29219/)
-* [リダイレクトで標準入力と標準出力をファイルへつなぐ](https://learnlinux.eksd.jp/useterminal_redirect.html)
+* [unittest --- ユニットテストフレームワーク](https://docs.python.org/ja/3/library/unittest.html)
 
 ## ライセンスと著作権
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
