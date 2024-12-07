@@ -1,0 +1,55 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Kaito Ito
+# SPDX-License-Identifier: BSD-3-Clause
+
+
+import random
+import sys
+
+# 季節ごとに5音、7音、5音の言葉を分けて定義
+season_words = {
+    "春": {
+        "5音": ["桜咲く", "風そよぐ", "梅の花", "花火果て", "雪解けて"],
+        "7音": ["花見の宴", "若葉の小川", "山路の道", "桜舞う空", "新芽の朝"],
+        "5音_end": ["芽吹きの日", "月夜かな", "青い空", "桜の下", "山笑う"]
+    },
+    "夏": {
+        "5音": ["向日葵", "蛍飛ぶ", "蝉しぐれ", "暑さまし", "夏祭り"],
+        "7音": ["夕立ちの雨", "青葉の匂い", "木陰に集う", "涼風の声", "浜辺の月"],
+        "5音_end": ["川の瀬々", "一雫", "涼しい風", "砂浜で", "波の音"]
+    },
+    "秋": {
+        "5音": ["鳥渡る", "稲穂ゆれ", "枯れ枝に", "秋風に", "十五夜"],
+        "7音": ["夕暮れの空", "月の光", "秋雨の道", "山の静けさ", "秋の小道"],
+        "5音_end": ["虫の声", "天の川", "涼しき風", "風まかせ", "いわし雲"]
+    },
+    "冬": {
+        "5音": ["雪降りて", "歩いては", "北風に", "草枯れて", "除夜の鐘"],
+        "7音": ["冬の静けさ", "白銀の道", "寒椿咲く", "霜の朝日", "冬の星空"],
+        "5音_end": ["霜の花", "雪の音", "息白し", "霜柱", "雪景色"]
+    }
+}
+
+# 俳句生成関数
+def generate_haiku(season):
+    if season not in season_words:
+        print("無効な入力です。'春', '夏', '秋', '冬'のいずれかを入力してください。", file=sys.stderr)
+        sys.exit(1)
+
+    # 各音節の言葉をランダムに選択
+    words = season_words[season]
+    first_line = random.choice(words["5音"])
+    second_line = random.choice(words["7音"])
+    third_line = random.choice(words["5音_end"])
+
+    # 俳句を結合して出力
+    haiku = f"{first_line}\n{second_line}\n{third_line}"
+    print(haiku)
+
+# 標準入力から季節を受け取る
+def main():
+    season = sys.stdin.read().strip()
+    generate_haiku(season)
+
+if __name__ == "__main__":
+    main()
