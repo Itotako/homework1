@@ -8,7 +8,7 @@
 ## 利用方法
 
 ```bash
-$ git clone https://github.com/Itotako/homework1_robosys2024.git   # リポジトリをクローン
+$ git clone https://github.com/Itotako/homework1_robosys2024.git  # リポジトリをクローン
 $ cd homework1_robosys2024           # homework_robosys2024に移動
 $ echo 春 | ./haiku_generator        # 実行例1
 雪解けて
